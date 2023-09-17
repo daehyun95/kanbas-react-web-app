@@ -1,0 +1,232 @@
+<button class="tablinks" onclick="openPage(event, 'CourseDetails')" id="defaultOpen">Course Details</button>
+<button class="tablinks" onclick="openPage(event,'Sections')">Sections</button>
+<button class="tablinks" onclick="openPage(event,'Navigation')">Navigation</button>
+<button class="tablinks" onclick="openPage(event,'Apps')">Apps</button>
+<button class="tablinks" onclick="openPage(event,'FeatureOptions')">Feature Options</button>
+<button class="tablinks" onclick="openPage(event,'Integrations')">Integrations</button>
+<hr/>
+
+<div id="CourseDetails" class="tabcontent">
+    <h2> Course Details</h2>
+
+    <b>Image: </b>
+        <input type="file" id="photo" name="photo">
+    <br/>
+    <br/>
+    <b>Name: </b>CS4550 12631 Web Development SEC 01 Fall 2023[BOS-1-TR]<br/>
+    <br/>
+    <b>Course Code: </b>CS4550.12631.202410<br/>
+    <br/>
+    <b>Blueprint Course: </b>No<br/>
+    <br/>
+    <b>Course Template: </b>
+        <input type="checkbox" id="enableCourseTemplate"/><label for="enableCourseTemplate">Enable course as a Course Template</label> <br/>
+    <br/>
+    <b>Time Zone: </b>
+        <select>
+            <option>Eastern Time(US & Canada) (-05:00/-04:00)</option>
+        </select>
+    <br/>
+    <br/>
+    <b>SIS ID: </b>CS4550.12631.202410<br/>
+    <br/>
+    <b>Subaccount: </b><a href="#">CS Undergrad</a><br/>
+    <br/>
+    <b>Term: </b>202410_1 Fall 2023 Semester Full Term<br/>
+    <br/>
+    <b>Participation: </b>
+        <select>
+            <option>Term</option>
+        </select>
+    <br/>
+    Course participation is limited to <b>term</b> start and end dates
+    <br/>
+    <br/>
+    <label for="text-fields-start">
+        Start
+    </label><br/>
+    <input type="date"
+    id="text-fields-start"
+    value=""/><br/>
+    <br/>
+    <label for="text-fields-end">
+        End
+    </label><br/>
+    <input type="date"
+    id="text-fields-end"
+    value=""/><br/>
+    <br/>
+    <input type="checkbox" id="RestrictStudentsbeforeStartDate"/><label for="RestrictStudentsbeforeStartDate">Restrict students from viewing course before term start date</label> <br/>
+    <input type="checkbox" id="RestrictStudentsafterEndDate"/><label for="RestrictStudentsafterEndDate">Restrict students from viewing course after term end date</label> <br/>
+    <br/>
+    <b>Default due time: </b>
+        <select>
+            <option>Account default (11:59pm)</option>
+        </select>
+    <br/>
+    This influences the user interface for setting due dates. It does not change the time due for any existing assignments
+    <br/>
+    <br/>
+    <b>Language: </b>
+        <select>
+            <option>Not set(user-configurable, default to English))</option>
+        </select>
+    <br/>
+    This will override any user/system language preferences. This is only recommend for foreign language courses
+    <br/>
+    <br/>
+    <b>File Storage: </b>10000 megabytes<br/>
+    <br/>
+
+    <b>Large Course: </b>
+        <input type="checkbox" id="launchSpeedGrader"/><label for="launchSpeedGrader">Launch SpeedGrader Filtered by Student Group</label> <br/>
+    <br/>
+
+    <b>Garding Scheme: </b>
+        <input type="checkbox" id="enableCrouseGradingScheme"/><label for="enableCrouseGradingScheme">Enable course grading scheme</label> <br/>
+    <br/>
+
+    <b>License: </b>
+    <select>
+        <option>Private(Copyrighted)</option>
+    </select><br/>
+    <br/>
+    <b>File Copyright:</b>
+        <input type="checkbox" id="copyright"/><label for="copyright"> Copyright and license information must be provided for files before they are published</label> <br/>
+    <br/>
+    <b>Visibility: </b>If you need to make your course public please contact your administrator/support<br/>
+    <select>
+        <option>Course</option>
+    </select>
+    <br/>
+    <input type="checkbox" id="publicCourseIndex"/><label for="publicCourseIndex">Include this course in the public course index</label> <br/>
+    <br/>
+
+    <b>Format: </b>
+        <select>
+            <option>On-Campus</option>
+        </select>
+    <br/>
+    <br/>
+
+    <b>Mastery Paths: </b>
+        <input type="checkbox" id="enableIndividualLearningPath"/><label for="enableIndividualLearningPath">Enable individual learning paths for students based on assessment</label> <br/>
+    <br/>
+    <br/>
+
+    <b>Description: </b>
+        <textarea cols="40" rows="10"></textarea>
+    <br/>
+    <br/>
+
+    <a href="#">more options</a>
+
+    <hr/>
+    <button>Update Course Details</button>
+</div>
+
+<div id="Navigation" class="tabcontent">
+    Drag and drop items to reorder them in the course Navigation<br/>
+    <br/>
+    <table border="1" style="width:50%">
+        <tr>
+            <th>Home</th>
+        </tr>
+        <tr>
+            <td>Modules</td>
+        </tr>
+        <tr>
+             <td>Piazza</td>
+        </tr>
+        <tr>
+            <td>Zoom Meetings</td>
+        </tr>
+        <tr>
+            <td>Assignments</td>
+        </tr>
+        <tr>
+            <td>Qizzes</td>
+        </tr>
+        <tr>
+            <td>Grades</td>
+        </tr>
+        <tr>
+            <td>People</td>
+        </tr>
+        <tr>
+            <td>Panopto Video</td>
+        </tr>
+    </table>
+    <br/>
+    Drag items here to hide them from studnets.<br/>
+    Disabling most pages will cause students who visit those pages to be redirected to the course home page.
+    <br/><br/>
+    <table border="1" style="width:50%">
+        <tr>
+            <td>Chat<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>SCORM<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Attendance<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Barnes and Noble Bookstore<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Digication<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Top Hat<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Syllabus<br/>&nbsp;Page disabled, will redirect to course home page</td>
+        </tr>
+        <tr>
+            <td>Perusall<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Microsoft Teams Meetings<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>FACT Reporting and Photo Roster<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Progress REports (Navigate)<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Microsoft Teams for Canvas<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>VHL Central<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Gradescope 1.3<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>Credentials<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+        <tr>
+            <td>iClicker<br/>&nbsp;Page disabled, won't appear in navigation</td>
+        </tr>
+    </table><br/>
+    <button>Save</button>
+</div>
+
+<script>
+    function openPage(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+</script>

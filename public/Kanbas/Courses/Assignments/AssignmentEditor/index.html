@@ -1,0 +1,81 @@
+<select>
+    <option>SpeedGrader</option>
+</select>
+<hr />
+
+<h3>Assignment Name</h3>
+<input type="text" value="A1 - ENV + HTML" id="assignmentName" placeholder="Assignment Name"/><br />
+<br />
+<textarea cols="40", row="10">This is the assignment description.</textarea><br/>
+<br/>
+Points<br/>
+<input value="100" type="number"><br/>
+<br/>
+Assignment Group<br/>
+<select>
+    <option>ASSIGNMENTS</option>
+</select> <br />
+<br />
+Display Grade as<br />
+<select>
+    <option>Percentage</option>
+</select><br />
+<br />
+Submission Type<br />
+<select>
+    <option>Online</option>
+</select><br />
+<br />
+Online Entry Options<br/>
+<input type="checkbox" id="textEntry"/><label for="textEntry"> Text Entry</label> <br/>
+<input type="checkbox" id="websiteURL"/><label for="websiteURL"> Website URL</label> <br/>
+<input type="checkbox" id="mediaRecordings"/><label for="mediaRecordings"> Media Recordings</label> <br/>
+<input type="checkbox" id="studentAnnotation"/><label for="studentAnnotation"> Student Annotation</label> <br/>
+<input type="checkbox" id="fileUploads"/><label for="fileUploads"> File Uploads</label> <br/>
+<br />
+Submission Attempts<br />
+<select>
+    <option>Unlimited</option>
+</select><br />
+<br />
+Plagiarism Review<br />
+<select>
+    <option>None</option>
+</select><br />
+<br/>
+Group Assignment<br />
+<input type="checkbox" id="groupAssignment"/><label for="groupAssignment"> This is a group assignment</label> <br/>
+<br/>
+Peer Reviews<br />
+<input type="checkbox" id="peerReviews"/><label for="peerReviews"> Require Peer Reviews</label> <br/>
+<br/>
+Assign<br/>
+Assign to<br/>
+<input value="Everyone" type="text"><br/>
+<br/>
+<label for="due">
+Due
+</label><br/>
+<input type="date"
+    id="due"
+    value="2021-01-01"/><br/>
+<br/>
+<label for="availableFrom">
+    Available from
+</label><br/>
+<input type="date"
+    id="availableFrom"
+    value="2021-01-01"/><br/>
+<br/>
+<label for="until">
+    Until
+</label><br/>
+<input type="date"
+    id="until"
+    value="2021-01-01"/><br/>
+<br/>
+<form action = "/Kanbas/Courses/Assignments/screen.html">
+<button>Cancel</button>
+<form action = "/Kanbas/Courses/Assignments/screen.html">
+<button>Save</button>
+</form>
