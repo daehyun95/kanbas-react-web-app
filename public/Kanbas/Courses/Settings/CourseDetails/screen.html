@@ -36,12 +36,12 @@
             </ul>
         </td>
         <td valign="top">
-            <button class="tablinks" onclick="openPage(event, 'CourseDetails')" id="defaultOpen">Course Details</button>
-            <button class="tablinks" onclick="openPage(event,'Sections')">Sections</button>
-            <button class="tablinks" onclick="openPage(event,'Navigation')">Navigation</button>
-            <button class="tablinks" onclick="openPage(event,'Apps')">Apps</button>
-            <button class="tablinks" onclick="openPage(event,'FeatureOptions')">Feature Options</button>
-            <button class="tablinks" onclick="openPage(event,'Integrations')">Integrations</button>
+            <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html"><button>Course Details</button></a>
+            <a href="#"><button>Sections</button></a>
+            <a href="/Kanbas/Courses/Settings/Navigation/screen.html"><button>Navigation</button></a>
+            <a href="#"><button>Apps</button></a>
+            <a href="#"><button>Feature Options</button></a>
+            <a href="#"><button>Integrations</button></a>
             <hr/>
 
             <div id="CourseDetails" class="tabcontent">
@@ -162,112 +162,6 @@
                 <hr/>
                 <button>Update Course Details</button>
             </div>
-
-            <div id="Navigation" class="tabcontent">
-                Drag and drop items to reorder them in the course Navigation<br/>
-                <br/>
-                <table border="1" style="width:50%">
-                    <tr>
-                        <th>Home</th>
-                    </tr>
-                    <tr>
-                        <td>Modules</td>
-                    </tr>
-                    <tr>
-                        <td>Piazza</td>
-                    </tr>
-                    <tr>
-                        <td>Zoom Meetings</td>
-                    </tr>
-                    <tr>
-                        <td>Assignments</td>
-                    </tr>
-                    <tr>
-                        <td>Qizzes</td>
-                    </tr>
-                    <tr>
-                        <td>Grades</td>
-                    </tr>
-                    <tr>
-                        <td>People</td>
-                    </tr>
-                    <tr>
-                        <td>Panopto Video</td>
-                    </tr>
-                </table>
-                <br/>
-                Drag items here to hide them from studnets.<br/>
-                Disabling most pages will cause students who visit those pages to be redirected to the course home page.
-                <br/><br/>
-                <table border="1" style="width:50%">
-                    <tr>
-                        <td>Chat<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>SCORM<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Attendance<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Barnes and Noble Bookstore<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Digication<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Top Hat<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Syllabus<br/>&nbsp;Page disabled, will redirect to course home page</td>
-                    </tr>
-                    <tr>
-                        <td>Perusall<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Microsoft Teams Meetings<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>FACT Reporting and Photo Roster<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Progress REports (Navigate)<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Microsoft Teams for Canvas<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>VHL Central<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Gradescope 1.3<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>Credentials<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                    <tr>
-                        <td>iClicker<br/>&nbsp;Page disabled, won't appear in navigation</td>
-                    </tr>
-                </table><br/>
-                <button>Save</button>
-            </div>
-
-            <script>
-                function openPage(evt, tabName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(tabName).style.display = "block";
-                evt.currentTarget.className += " active";
-                }
-                document.getElementById("defaultOpen").click();
-            </script>
         </td>
     </tr>
 </table>
