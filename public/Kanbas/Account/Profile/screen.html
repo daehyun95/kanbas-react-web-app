@@ -1,48 +1,100 @@
+<link href="/../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+<link href="/Kanbas/KanbasNavigation/index.css" rel="stylesheet"/>
+<link href="/Kanbas/Account/AccountNavigation/index.css" rel="stylesheet"/>
+<link href="/Kanbas/Account/Profile/index.css" rel="stylesheet"/>
+
+
 <table border="1" width="100%">
     <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
+        <td valign="top" class="wd-sidebar">
+            <div>
+                <ul class="nav flex-column">
+                    <image class="tp-logo" src="/../NEUlogo.png">
+                    <a class="custom-nav-link  active" href="/Kanbas/Account/Profile/screen.html">
+                        <i class="fa fa-light fa-user-circle fa-2x" style="color: #cfcfcf;"></i><br/>
+                         Account</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-tachometer-alt fa-2x" style="color: #e71c0d;"></i><br/>
+                        Dashboard</a>
+                    <a class="custom-nav-link" href="/Kanbas/Courses/Home/screen.html">
+                        <i class="fas fa-book fa-2x" style="color: #e71c0d;"></i><br/>
+                        Courses</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-calendar-alt fa-2x" style="color: #e71c0d;"></i><br/>
+                        Calendar</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-envelope-open-text fa-2x" style="color: #e71c0d;"></i><br/>
+                        Inbox</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="far fa-clock fa-2x" style="color: #e71c0d;"></i><br/>
+                        History</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-network-wired fa-2x" style="color: #e71c0d;"></i><br/>
+                        Studio</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-sign-out-alt fa-2x" style="color: #e71c0d;"></i><br/>
+                        Commons</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="far fa-question-circle fa-2x" style="color: #e71c0d;"></i><br/>
+                        Help</a>
+                </ul>
+            </div>
+        </td>
+        <td valign="top" class="account-sidebar">
+            <div>
+                <ul class="nav flex-column custom-ps-0">
+                    <a class="custom-profile-nav-link" href="#">Notifications</a>
+                    <a class="custom-profile-nav-link active" href="/Kanbas/Account/Profile/screen.html">
+                        Profile
+                    </a>
+                    <a class="custom-profile-nav-link" href="#">Files</a>
+                    <a class="custom-profile-nav-link" href="#">Settings</a>
+                    <a class="custom-profile-nav-link" href="#">ePortfolios</a>
+                    <a class="custom-profile-nav-link" href="#">Shared Content</a>
+                    <a class="custom-profile-nav-link" href="#">The Hub</a>
+                    <a class="custom-profile-nav-link" href="#">Qwickly Course Tools</a>
+                    <a class="custom-profile-nav-link" href="#">Global Announcements</a>
+                </ul>
+            </div>
         </td>
         <td valign="top">
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>                
-            </ul>
-        </td>
-        <td valign="top">
-            Dae Hyun Chung's Profile
-            <hr />
-            <h2> Dae Hyun Chung</h2>
+            <div>
+                Dae Hyun Chung's Profile
+                <hr />
             
-            <form action="/Kanbas/Account/Profile/EditProfile/edit.html">
-                <button>Edit Profile</button>
-            </form>
+                <div class="profile-container div1" >
+                    <div class="edit-profile-button float-end">
+                        <form action="/Kanbas/Account/Profile/EditProfile/edit.html">
+                            <button class="btn btn-secondary btn-sm">
+                                <i class="fas fa-pencil-alt"></i>
+                                <span class="give-space">Edit Profile</span>
+                            </button>
+                        </form>
+                    </div>
+                    <i class="fa fa-user fa-5x icon-container" aria-hidden="true"></i>
+                    <h2 class="profile-name">Dae Hyun Chung</h2>
+                </div>
             
-            <h3> Contact</h3>
-            No registered services, you can add some on the <a href="#">settings</a> page
+               
+                <div class="div1">
+                    <h4> Contact</h4>
+                    No registered services, you can add some on the <a href="#" class="link-decoration">settings</a> page
+                </div>
+               
+                <div class="div1">
+                    <h3>Biography</h3>
+                    Faculty, Software Enginner, AI, Space, and renewables enthusiast
+                </div>
             
-            <h3>Biography</h3>
-            Faculty, Software Enginner, AI, Space, and renewables enthusiast
-            
-            <h3>Links</h3>
-            <a href="#">YouTube</a>
+                <div>
+                    <h3>Links</h3>
+                    <i class="fa fa-link"></i>
+                    <a href="#" class="link-decoration">
+                        <span class="give-space">YouTube</span>
+                    </a>
+                </div>
+            </div>
         </td>
     </tr>
 </table>
