@@ -1,0 +1,135 @@
+.db-format {
+    margin-left: 10px;
+}
+
+.db-mt-0 {
+    margin-left: 10px;
+    margin-top: 8px !important;
+    width: 90%; 
+    max-width: 1200px;
+}
+
+.custom-p-0 {
+    padding: 7%;
+}
+
+.custom-mx-0 {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.course {
+    border: 1px solid white;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    position: relative;
+}
+
+.course-bg {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+
+}
+
+.course-body {
+    padding-top: 50%;
+    padding-left: 10px;
+}
+
+.course-title {
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+.course-text {
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+.course-detail {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.course .course-bg-1 {
+    background-color: red;
+}
+
+.course .course-title-1 {
+    text-decoration: none;
+    color: red;
+}
+
+.course .course-bg-2 {
+    background-color: rgb(218, 43, 43);
+}
+
+.course .course-title-2 {
+    text-decoration: none;
+    color: rgb(218, 43, 43);
+}
+
+.course .course-bg-3 {
+    background-color: rgb(215, 167, 167);
+}
+
+.course .course-title-3 {
+    text-decoration: none;
+    color: rgb(215, 167, 167);
+}
+
+.course .course-bg-4 {
+    background-color: rgb(62, 65, 222);
+}
+
+.course .course-title-4 {
+    text-decoration: none;
+    color: rgb(62, 65, 222);
+}
+
+.course .course-bg-5 {
+    background-color: blue;
+}
+
+.course .course-title-5 {
+    text-decoration: none;
+    color: blue;
+}
+
+.course .course-bg-6 {
+    background-color: rgb(0, 179, 255);
+}
+
+.course .course-title-6 {
+    text-decoration: none;
+    color: rgb(0, 179, 255);
+}
+
+.course .course-bg-7 {
+    background-color: rgb(25, 86, 159);
+}
+
+.course .course-title-7 {
+    text-decoration: none;
+    color: rgb(25, 86, 159);
+}
+
+.course .course-bg-8 {
+    background-color: rgb(200, 0, 255);
+}
+
+.course .course-title-8 {
+    text-decoration: none;
+    color: rgb(200, 0, 255);
+}
+
+.db-header-col {
+    margin-left: 10px;
+    margin-top: 18px;
+    margin-bottom: 35px;
+    height: 25px;
+    font-size: 25px;
+}

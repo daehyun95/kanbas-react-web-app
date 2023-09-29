@@ -1,0 +1,38 @@
+.header-col {
+    height: 55px;
+    margin-bottom: 10px;
+}
+
+
+.breadcrumb-format {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.link-decoration {
+    text-decoration: none;
+    color: red;
+}
+
+.format-button-size {
+    text-align: center;
+    font-size: xx-small;
+    width: 100px;
+    height: 30px;
+}
+
+.format-ellipsis-size {
+    text-align: center;
+    font-size: xx-small;
+    width: 20px;
+    height: 30px;
+}
+
+.breadcrumb-module-format {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+hr.new1 {
+    border: 1.3px solid rgba(128, 128, 128, 0.166);
+  }

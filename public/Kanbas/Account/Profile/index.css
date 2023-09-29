@@ -70,3 +70,11 @@
     text-align: right;
 }
 
+.header-col-1 {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.header-height {
+    height: 55px;
+}
+

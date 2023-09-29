@@ -1,21 +1,21 @@
 <link href="/../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="/../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
 <link href="/Kanbas/KanbasNavigation/index.css" rel="stylesheet"/>
-<link href="/Kanbas/KanbasNavigation/index.css" rel="stylesheet"/>
 <link href="/Kanbas/Account/AccountNavigation/index.css" rel="stylesheet"/>
 <link href="/Kanbas/Account/Profile/index.css" rel="stylesheet"/>
+<link href="/Kanbas/Courses/Home/index.css" rel="stylesheet"/>
 
 
 <table border="1" width="100%">
     <tr>
-        <td valign="top" class="wd-sidebar">
+        <td rowspan="2" valign="top" class="wd-sidebar">
             <div>
                 <ul class="nav flex-column">
                     <image class="tp-logo" src="/../NEUlogo.png">
-                    <a class="custom-nav-link  active" href="/Kanbas/Account/Profile/screen.html">
+                    <a class="custom-nav-link active" href="/Kanbas/Account/Profile/screen.html">
                         <i class="fa fa-light fa-user-circle fa-2x" style="color: #cfcfcf;"></i><br/>
-                         Account</a>
-                    <a class="custom-nav-link" href="#">
+                        Account</a>
+                    <a class="custom-nav-link" href="/Kanbas/Dashboard/screen.html">
                         <i class="fas fa-tachometer-alt fa-2x" style="color: #e71c0d;"></i><br/>
                         Dashboard</a>
                     <a class="custom-nav-link" href="/Kanbas/Courses/Home/screen.html">
@@ -42,6 +42,14 @@
                 </ul>
             </div>
         </td>
+        <td colspan="2"  class="header-height">
+            <div class="header-col-1" style="margin-top: 15px;">
+                <i class="fas fa-bars "></i>
+                Dae Hyun Chung's Profile
+                <hr style="margin-top: 20px"/>
+            </div>
+        </td>
+    </tr>
         <td valign="top" class="account-sidebar">
             <div>
                 <ul class="nav flex-column custom-ps-0">
@@ -133,10 +141,7 @@
                         <button class="btn btn-danger btn-sm">Save Profile</button>
                     </div>
                 </form>
-            
-            
             </div>
-            
         </td>
     </tr>
 </table>
