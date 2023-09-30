@@ -2,11 +2,15 @@
 <link href="/../vendors/fontawesome/css/all.css" rel="stylesheet"/>
 <link href="/Kanbas/KanbasNavigation/index.css" rel="stylesheet"/>
 <link href="/Kanbas/Account/AccountNavigation/index.css" rel="stylesheet"/>
+<link href="/Kanbas/Courses/Home/index.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
 
 <table border="1" width="100%">
     <tr>
-        <td valign="top" class="wd-sidebar">
-            <div>
+        <td class="kanbas-navi-custom" rowspan="2" valign="top" >
+            <div class=" wd-sidebar" >
                 <ul class="nav flex-column">
                     <image class="tp-logo" src="/../NEUlogo.png">
                     <a class="custom-nav-link" href="/Kanbas/Account/Profile/screen.html">
@@ -39,7 +43,24 @@
                 </ul>
             </div>
         </td>
-        <td valign="top" class="account-sidebar">
+        <td colspan="2">
+            <div class="header-col" >
+                <nav aria-label="breadcrum" >
+                    <ol class="breadcrumb breadcrumb-format" style="--bs-breadcrumb-divider: '>';">
+                        <li class="breadcrumb-item" >
+                            <i class="fas fa-bars"></i>
+                            <a href="/Kanbas/Courses/Home/screen.html" class="link-decoration">CS5610.17367.202410</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page" >Grades</li>
+                    </ol>
+                </nav>
+                <hr style="margin-top: 20px; margin-left: 10px; "/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+       
+        <td class= "account-sidebar" valign="top">
             <div>
                 <ul class="nav flex-column custom-ps-0">
                     <a class="custom-profile-nav-link" href="/Kanbas/Courses/Home/screen.html">Home</a>
@@ -60,70 +81,233 @@
                     <a class="custom-profile-nav-link" href="#">Collaborations</a>
                     <a class="custom-profile-nav-link" href="#">Syllabus</a>
                     <a class="custom-profile-nav-link" href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a>
-                </ul>
+                </ul></hr>
             </div>
         </td>
         <td valign="top">
-            <select>
-            <option>Gradebook</option>
-            </select>
-            <button>Import</button>
-            <select>
-                <option>Export</option>
-                <option>Unpublish</option>
-            </select>
-            <button>Configure</button>
-            
-            
-            <table width='100%'>
-                <tr>
-                    <td>Student Names<input title="Type the name of the student to search for" placeholder="Search Students"/></td>
-                    <td>Assignment Names<input placeholder="Search Assignments"/></td>
-                </tr>
-            </table>
-            <button>Apply Filters</button>
-            
-            
-            <table border="1" width="100%">
+            <div>
+                <div class="d-grid gap-1 d-flex justify-content-end mb-1">
+                    <button type="button" class="btn btn-secondary  format-button-size "><i class="fas fa-file-import me-2"></i>Import</button>                    
+                    <div class="dropdown">
+                        <button class="btn btn-secondary format-button-size dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-file-export me-2"></i>
+                            Export
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" href="#">...</a></li>
+                         
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-secondary  format-ellipsis-size" style="width: 40px;"><i class="fas fa-cog"></i></button>
+                </div> 
+                <div class="row mb-1">
+                    <label for="studentNames" class="col-sm-6 col-form-label "><b>Student Names</b></label>
+                    <label for="assignmentNames" class="col-sm-6 col-form-label "><b>Assignment Names</b></label>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="studentNames" placeholder="Search Students">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="assignmentNames" placeholder="Search Assignments">
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <button type="button" class="btn btn-secondary format-button-size" style="width: 120px;"><i class="fas fa-filter me-2"></i></i>Apply Filters</button>                    
+                </div> 
+            </div>
+            <table class="table table-bordered table-striped">
                 <thead>
-                <tr>
-                    <th>Student Name</th>
-                    <th>A1 SETUP Out of 100</th>
-                    <th>A2 HTML Out of 100</th>
-                    <th>A3 CSS Out of 100</th>
-                    <th>A4 BOOTSTRAP Out of 100</th>
-                </tr>
+                  <tr class="align-items-center ">
+                    <th scope="col" style="vertical-align: middle;">Student Name</th>
+                    <th scope="col"  class="text-center">
+                        A1 SETUP<br/>
+                        Out of 100    
+                    </th>
+                    <th scope="col" class="text-center">
+                        A2 HTML<br/>
+                        Out of 100    
+                    </th>
+                    <th scope="col" class="text-center">
+                        A3 CSS<br/>
+                        Out of 100    
+                    </th>
+                    <th scope="col" class="text-center">
+                        A4 BOOTSTRAP<br/>
+                        Out of 100    
+                    </th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Alice Wonderland</td>
-                    <td>98</td>
-                    <td><input type="number"/></td>
-                    <td>96</td>
-                    <td>89</td>
-                </tr>
-                <tr>
-                    <td>Princes Lei</td>
-                    <td>86</td>
-                    <td>92</td>
-                    <td><input type="number"/></td>
-                    <td>96</td>
-                </tr>
-                <tr>
-                    <td>Luke Skywalker</td>
-                    <td><input type="number"/></td>
-                    <td>88</td>
-                    <td>95</td>
-                    <td>89</td>
-                </tr>
-                <tr>
-                    <td>Han Solo</td>
-                    <td>78</td>
-                    <td>87</td>
-                    <td>86</td>
-                    <td><input type="number"/></td>
-                </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal">Doxa Asibey</th>
+                        <td  class="text-center">
+                            100%  
+                        </td>
+                        <td  class="text-center">
+                            <input type="number" class="form-control input-sm mx-auto" style="width: 90px; height: 20px;" value="94.25" min="0" max="100" step="0.01">
+                        </td>
+                        <td class="text-center">
+                            94.50%    
+                        </td>
+                        <td class="text-center">
+                            100%  
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal">Thuy Tien Bui</th>
+                        <td  class="text-center">
+                            <input type="number" class="form-control input-sm mx-auto" style="width: 90px; height: 20px;" value="100" min="0" max="100" step="0.01">
+                        </td>
+                        <td  class="text-center">
+                            100%
+                        </td>
+                        <td class="text-center">
+                            100%    
+                        </td>
+                        <td class="text-center">
+                            99.02%  
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal">Yetong Chen</th>
+                        <td  class="text-center">
+                            100%  
+                        </td>
+                        <td  class="text-center">
+                            100%
+                        </td>
+                        <td class="text-center">
+                            100%    
+                        </td>
+                        <td class="text-center">
+                            <input type="number" class="form-control input-sm mx-auto" style="width: 90px; height: 20px;" value="90.55" min="0" max="100" step="0.01">
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal"> Zhenyu Chen </th>
+                        <td  class="text-center">
+                            100%  
+                        </td>
+                        <td  class="text-center">
+                            82.50%
+                        </td>
+                        <td class="text-center">
+                            100%    
+                        </td>
+                        <td class="text-center">
+                            100%  
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal"> Yung-Shin Chien </th>
+                        <td  class="text-center">
+                            100%  
+                        </td>
+                        <td  class="text-center">
+                            <input type="number" class="form-control input-sm mx-auto" style="width: 90px; height: 20px;" value="98.25" min="0" max="100" step="0.01">
+                        </td>
+                        <td class="text-center">
+                            88.25%    
+                        </td>
+                        <td class="text-center">
+                            100%  
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal"> Basil Coughlan </th>
+                        <td  class="text-center">
+                            50.00%  
+                        </td>
+                        <td  class="text-center">
+                            100%
+                        </td>
+                        <td class="text-center">
+                            <input type="number" class="form-control input-sm mx-auto" style="width: 90px; height: 20px;" value="100" min="0" max="100" step="0.01">
+                        </td>
+                        <td class="text-center">
+                            100%  
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal"> Rachel Dao </th>
+                        <td  class="text-center">
+                            100%  
+                        </td>
+                        <td  class="text-center">
+                            100%
+                        </td>
+                        <td class="text-center">
+                            100%    
+                        </td>
+                        <td class="text-center">
+                            100%  
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal"> Lana Do </th>
+                        <td  class="text-center">
+                            100%  
+                        </td>
+                        <td  class="text-center">
+                            100%
+                        </td>
+                        <td class="text-center">
+                            100%    
+                        </td>
+                        <td class="text-center">
+                            <input type="number" class="form-control input-sm mx-auto" style="width: 90px; height: 20px;" value="100" min="0" max="100" step="0.01">
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal"> Kartikey Dwivedi </th>
+                        <td  class="text-center">
+                            <input type="number" class="form-control input-sm mx-auto" style="width: 90px; height: 20px;" value="100" min="0" max="100" step="0.01">
+                        </td>
+                        <td  class="text-center">
+                            100%
+                        </td>
+                        <td class="text-center">
+                            100%    
+                        </td>
+                        <td class="text-center">
+                            100%  
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal"> Jiarong Feng </th>
+                        <td  class="text-center">
+                            100%  
+                        </td>
+                        <td  class="text-center">
+                            100%
+                        </td>
+                        <td class="text-center">
+                            100%    
+                        </td>
+                        <td class="text-center">
+                            100%  
+                        </td>
+                    </tr>
+                    <tr class="align-items-center ">
+                        <th scope="col" style="vertical-align: middle; color:rgb(184, 34, 34); font-weight:normal"> Saurabhi Sunil Gade </th>
+                        <td  class="text-center">
+                            100%  
+                        </td>
+                        <td  class="text-center">
+                            100%
+                        </td>
+                        <td class="text-center">
+                            100%    
+                        </td>
+                        <td class="text-center">
+                            100%  
+                        </td>
+                    </tr>
+
+
+                  
                 </tbody>
-            </table></td>
+          </table>
     </tr>
 </table>

@@ -20,6 +20,12 @@
     width: 100px;
     height: 30px;
 }
+.format-button-size-2 {
+    text-align: center;
+    font-size: xx-small;
+    width: 120px;
+    height: 30px;
+}
 
 .format-ellipsis-size {
     text-align: center;
@@ -36,3 +42,19 @@
 hr.new1 {
     border: 1.3px solid rgba(128, 128, 128, 0.166);
   }
+
+
+.wd-rounded-corners-all-around {
+    border-radius: 55px;
+}
+
+.wd-border-thin {
+    border-width: 1px;
+}
+.wd-border-solid {
+    border-style: solid; 
+}
+
+.wd-padding-fat {
+    padding: 3px;
+    }
