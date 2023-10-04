@@ -242,3 +242,13 @@ z-index: 10;
     width: 75px;
   }
   
+
+  .btn-primary.override-bs {
+      background-color: #a90dfd;
+      border-color: #fd0d51;
+      border-width: 10px;
+      border-radius: 20px;
+      border-style: dashed;
+      font-size: 2em;
+      font-weight: bolder;
+}
