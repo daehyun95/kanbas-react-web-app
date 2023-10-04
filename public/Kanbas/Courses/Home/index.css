@@ -59,3 +59,8 @@ hr.new1 {
     padding: 3px;
     }
 
+.dropdown-menu-full-width {
+    min-width: 100vw;
+    left: 0 !important;
+    right: 0 !important;
+}
