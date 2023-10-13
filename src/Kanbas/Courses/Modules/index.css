@@ -1,0 +1,11 @@
+.format-button-size {
+    width: 100px;
+    height: 30px;
+}
+
+.format-ellipsis-size {
+    text-align: center;
+    font-size: xx-small;
+    width: 20px;
+    height: 30px;
+}
