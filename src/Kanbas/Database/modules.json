@@ -6,15 +6,28 @@
     "course": "RS101",
     "lessons": [
       {
-        "name": "Introduction to Rocket Propulsion I",
+        "week": "0",
+        "name": "Introduction to Rocket Propulsion 0",
         "description": "Rocket propulsion is the science of accelerating matter to very high speeds using rockets. The matter, called propellant, is stored in a tank and ejected at high speed through a nozzle. The propellant is ejected at high speed in the opposite direction of the desired rocket motion, as described by Newton's third law of motion."
       },
       {
-        "name": "Introduction to Rocket Propulsion II",
+        "week": "0",
+        "name": "Rocket Propulsion 0",
+        "description": "Rocket propulsion is the science of accelerating matter to very high speeds using rockets. The matter, called propellant, is stored in a tank and ejected at high speed through a nozzle. The propellant is ejected at high speed in the opposite direction of the desired rocket motion, as described by Newton's third law of motion."
+      },
+      {
+        "week": "0",
+        "name": "Rocket 0",
+        "description": "Rocket propulsion is the science of accelerating matter to very high speeds using rockets. The matter, called propellant, is stored in a tank and ejected at high speed through a nozzle. The propellant is ejected at high speed in the opposite direction of the desired rocket motion, as described by Newton's third law of motion."
+      },
+      {
+        "week": "1",
+        "name": "Introduction to Rocket Propulsion 1",
         "description": "Rocket propulsion is used in a wide variety of applications, including spaceflight, military missiles, and scientific research. The most common type of rocket propulsion system is the chemical rocket, which stores propellant in a tank and ejects it through a nozzle. Other types of rocket propulsion systems include electric propulsion, nuclear propulsion, and cold gas thrusters."
       },
       {
-        "name": "Introduction to Rocket Propulsion III",
+        "week": "2",
+        "name": "Introduction to Rocket Propulsion 2",
         "description": "The most common type of rocket propulsion system is the chemical rocket, which stores propellant in a tank and ejects it through a nozzle. Other types of rocket propulsion systems include electric propulsion, nuclear propulsion, and cold gas thrusters."
       }       
     ]
@@ -26,15 +39,28 @@
     "course": "RS101",
     "lessons": [
       {
-        "name": "Fuel and Combustion I",
+        "week": "0",
+        "name": "Fuel and Combustion 0",
         "description": "Rocket fuel is a material that releases energy when it is burned. The most common type of rocket fuel is liquid hydrogen, which is burned with liquid oxygen to produce water vapor. Other types of rocket fuel include kerosene, methane, and solid propellants."
       },
       {
-        "name": "Fuel and Combustion II",
+        "week": "0",
+        "name": "Fuel",
         "description": "Rocket fuel is a material that releases energy when it is burned. The most common type of rocket fuel is liquid hydrogen, which is burned with liquid oxygen to produce water vapor. Other types of rocket fuel include kerosene, methane, and solid propellants."
       },
       {
-        "name": "Fuel and Combustion III",
+        "week": "0",
+        "name": "Combustion",
+        "description": "Rocket fuel is a material that releases energy when it is burned. The most common type of rocket fuel is liquid hydrogen, which is burned with liquid oxygen to produce water vapor. Other types of rocket fuel include kerosene, methane, and solid propellants."
+      },
+      {
+        "week": "1",
+        "name": "Fuel and Combustion 1",
+        "description": "Rocket fuel is a material that releases energy when it is burned. The most common type of rocket fuel is liquid hydrogen, which is burned with liquid oxygen to produce water vapor. Other types of rocket fuel include kerosene, methane, and solid propellants."
+      },
+      {
+        "week": "2",
+        "name": "Fuel and Combustion 2",
         "description": "Rocket fuel is a material that releases energy when it is burned. The most common type of rocket fuel is liquid hydrogen, which is burned with liquid oxygen to produce water vapor. Other types of rocket fuel include kerosene, methane, and solid propellants."
       }
     ]
@@ -46,15 +72,18 @@
     "course": "RS101",
     "lessons": [
       {
-        "name": "Nozzle Design I",
+        "week": "0",
+        "name": "Nozzle Design 0",
         "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
       },
       {
-        "name": "Nozzle Design II",
+        "week": "1",
+        "name": "Nozzle Design 1",
         "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
       },
       {
-        "name": "Nozzle Design III",
+        "week": "2",
+        "name": "Nozzle Design 2",
         "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
       }
     ]
@@ -63,36 +92,138 @@
     "_id": "M201",
     "name": "Fundamentals of Aerodynamics",
     "description": "Basic aerodynamic concepts and fluid dynamics principles.",
-    "course": "RS102"
+    "course": "RS102",
+    "lessons": [
+      {
+        "week": "0",
+        "name": "Fundamentals of Aerodynamics 0",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "1",
+        "name": "Fundamentals of Aerodynamics 1",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "2",
+        "name": "Fundamentals of Aerodynamics 2",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      }
+    ]
   },
   {
     "_id": "M202",
     "name": "Subsonic and Supersonic Flow",
     "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
-    "course": "RS102"
+    "course": "RS102",
+    "lessons": [
+      {
+        "week": "0",
+        "name": "Subsonic and Supersonic Flow 0",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "1",
+        "name": "Subsonic and Supersonic Flow 1",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "2",
+        "name": "Subsonic and Supersonic Flow 2",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      }
+    ]
   },
   {
     "_id": "M203",
     "name": "Aerodynamic Heating",
     "description": "Study of aerodynamic heating and thermal protection systems.",
-    "course": "RS102"
+    "course": "RS102",
+    "lessons": [
+      {
+        "week": "0",
+        "name": "Aerodynamic Heating 0",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "1",
+        "name": "Aerodynamic Heating 1",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "2",
+        "name": "Aerodynamic Heating 2",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      }
+    ]
   },
   {
     "_id": "M301",
     "name": "Spacecraft Structural Design",
     "description": "Fundamentals of designing spacecraft structures and materials selection.",
-    "course": "RS103"
+    "course": "RS103",
+    "lessons": [
+      {
+        "week": "0",
+        "name": "Spacecraft Structural Design 0",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "1",
+        "name": "Spacecraft Structural Design 1",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "2",
+        "name": "Spacecraft Structural Design 2",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      }
+    ]
   },
   {
     "_id": "M302",
     "name": "Orbital Mechanics",
     "description": "Understanding orbital dynamics and mission planning.",
-    "course": "RS103"
+    "course": "RS103",
+    "lessons": [
+      {
+        "week": "0",
+        "name": "Orbital Mechanics 0",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "1",
+        "name": "Orbital Mechanics 1",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "2",
+        "name": "Orbital Mechanics2",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      }
+    ]
   },
   {
     "_id": "M303",
     "name": "Spacecraft Systems Engineering",
     "description": "Overview of spacecraft systems and subsystems engineering.",
-    "course": "RS103"
+    "course": "RS103",
+    "lessons": [
+      {
+        "week": "0",
+        "name": "Spacecraft Systems Engineering 0",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "1",
+        "name": "Spacecraft Systems Engineering 1",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      },
+      {
+        "week": "2",
+        "name": "Spacecraft Systems Engineering 2",
+        "description": "The nozzle is the part of a rocket engine that converts the energy of the propellant into kinetic energy. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction. The nozzle is designed to accelerate the propellant to a high speed and direct it in the desired direction."
+      }
+    ]
   }
 ]
