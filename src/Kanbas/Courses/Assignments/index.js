@@ -35,10 +35,10 @@ function Assignments() {
         <li className="list-group-item list-group-item-action list-group-item-secondary">
             Assignments  
             <div className="float-end">
-                <span>
+                <span className="me-2">
                     40% of Total
                 </span>
-                <AiOutlinePlus/>
+                <AiOutlinePlus className="me-1"/>
                 <BsThreeDotsVertical/>
             </div>
         </li>
@@ -62,10 +62,10 @@ function Assignments() {
         <li className="list-group-item list-group-item-action list-group-item-secondary">
             Quizzes  
             <div className="float-end">
-                <span>
+                <span className="me-2">
                     10% of Total
                 </span>
-                <AiOutlinePlus/>
+                <AiOutlinePlus className="me-1"/>
                 <BsThreeDotsVertical/>
             </div>
         </li>
@@ -89,10 +89,10 @@ function Assignments() {
         <li className="list-group-item list-group-item-action list-group-item-secondary">
             Exams  
             <div className="float-end">
-                <span>
+                <span className="me-2">
                     20% of Total
                 </span>
-                <AiOutlinePlus/>
+                <AiOutlinePlus className="me-1"/>
                 <BsThreeDotsVertical/>
             </div>
         </li>
@@ -116,10 +116,10 @@ function Assignments() {
         <li className="list-group-item list-group-item-action list-group-item-secondary">
           Projects  
           <div className="float-end">
-              <span>
+              <span className="me-2">
                   30% of Total
               </span>
-              <AiOutlinePlus/>
+              <AiOutlinePlus className="me-1"/>
               <BsThreeDotsVertical/>
           </div>
         </li>

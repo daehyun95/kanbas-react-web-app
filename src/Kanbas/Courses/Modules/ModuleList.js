@@ -38,10 +38,10 @@ function ModuleList() {
             modulesByWeek[week].map((module, moduleIndex) => (
               <li key={moduleIndex} className="list-group-item">
                 <div className="d-flex justify-content-between align-items-center">
-                  <div>
+                  <div className="mb-2">
                     {module.name}
                   </div>
-                  <div className="float-end me-3">
+                  <div className="float-end me-3 mb-2">
                     <AiOutlineCheckCircle className="me-1" />
                     <BsThreeDotsVertical />
                   </div>
