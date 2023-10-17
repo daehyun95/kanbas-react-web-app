@@ -25,7 +25,7 @@ function ModuleButton() {
                 <BsThreeDotsVertical/>
             </button>
           </div>
-          <hr style={{width:'90vw'}}/>
+          <hr/>
         </div>
     )
 }

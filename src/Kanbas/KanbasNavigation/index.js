@@ -24,7 +24,7 @@ function KanbasNavigation() {
   
   const { pathname } = useLocation();
   return (
-    <div className="wd-kanbas-navigation" style={{ width: 100}}>
+    <div className="wd-kanbas-navigation" style={{ width: 100, height: '100vw'}}>
       <div className="logo-container">
         <img src={logoImage} alt="Your Logo" className="tp-logo" />
       </div>

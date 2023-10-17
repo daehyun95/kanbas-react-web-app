@@ -4,6 +4,7 @@ import Courses from "./Courses";
 import Account from "./Account";
 import Dashboard from "./Dashboard";
 import Calendar from "./Calendar";
+
 // import Inbox from "./Inbox";
 // import History from "./History";
 // import Studio from "./Studio";
@@ -27,6 +28,7 @@ function Kanbas() {
                 <Route path="Commons" element= {<Commons/>} />
                 <Route path="Help" element= {<Help/>} /> */}
             </Routes>
+
         </div>
       </div>
     );
