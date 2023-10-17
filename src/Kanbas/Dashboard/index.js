@@ -11,7 +11,7 @@ function Dashboard() {
     <div className="db-container">
       <div>
         <h1 >Dashboard</h1>
-        <hr/>
+        <hr style={{width: "100vw"}}/>
       </div>
 
       <div className="db-mt-0">
