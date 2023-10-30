@@ -1,0 +1,36 @@
+.custom-profile-nav-link {
+    text-decoration: none;
+    color: red;
+    border-left: 1px solid transparent;
+    margin-bottom: 15px;
+}
+
+
+.custom-profile-nav-link.active {
+    color: black;
+    border-left: 2px solid black;
+    padding-left: 10px;
+}
+
+.custom-ps-0 {
+    padding-left: 8px !important;
+  }
+
+.custom-notification-mt-0 {
+    margin-top: 8px !important;
+}
+
+.account-sidebar {
+    width: 190px;
+    height: 100%;
+}
+
+.kanbas-navi-custom {
+    width: 75px;
+    background-color: black;
+}
+
+.account-sidebar {
+    width: 190px;
+    height: 100%;
+}

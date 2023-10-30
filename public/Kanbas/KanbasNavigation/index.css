@@ -1,0 +1,30 @@
+.wd-sidebar {
+    height:100%;
+    width: 75px;
+    background-color: black;
+}
+
+.custom-nav-link {
+    height: 75px;
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    color: white;
+    background-color: transparent;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+.tp-logo {
+    height: 75px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.custom-nav-link.active {
+    color: red;
+    background-color: white;
+}
+

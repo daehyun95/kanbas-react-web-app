@@ -1,72 +1,145 @@
+<link href="/../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+<link href="/Kanbas/KanbasNavigation/index.css" rel="stylesheet"/>
+<link href="/Kanbas/Account/AccountNavigation/index.css" rel="stylesheet"/>
+<link href="/Kanbas/Account/Profile/index.css" rel="stylesheet"/>
+<link href="/Kanbas/Courses/Home/index.css" rel="stylesheet"/>
+
+
 <table border="1" width="100%">
     <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
+        <td rowspan="2" valign="top" class="wd-sidebar">
+            <div>
+                <ul class="nav flex-column">
+                    <image class="tp-logo" src="/../NEUlogo.png">
+                    <a class="custom-nav-link active" href="/Kanbas/Account/Profile/screen.html">
+                        <i class="fa fa-light fa-user-circle fa-2x" style="color: #cfcfcf;"></i><br/>
+                        Account</a>
+                    <a class="custom-nav-link" href="/Kanbas/Dashboard/screen.html">
+                        <i class="fas fa-tachometer-alt fa-2x" style="color: #e71c0d;"></i><br/>
+                        Dashboard</a>
+                    <a class="custom-nav-link" href="/Kanbas/Courses/Home/screen.html">
+                        <i class="fas fa-book fa-2x" style="color: #e71c0d;"></i><br/>
+                        Courses</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-calendar-alt fa-2x" style="color: #e71c0d;"></i><br/>
+                        Calendar</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-envelope-open-text fa-2x" style="color: #e71c0d;"></i><br/>
+                        Inbox</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="far fa-clock fa-2x" style="color: #e71c0d;"></i><br/>
+                        History</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-network-wired fa-2x" style="color: #e71c0d;"></i><br/>
+                        Studio</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="fas fa-sign-out-alt fa-2x" style="color: #e71c0d;"></i><br/>
+                        Commons</a>
+                    <a class="custom-nav-link" href="#">
+                        <i class="far fa-question-circle fa-2x" style="color: #e71c0d;"></i><br/>
+                        Help</a>
+                </ul>
+            </div>
+        </td>
+        <td colspan="2"  class="header-height">
+            <div class="header-col-1" style="margin-top: 15px;">
+                <i class="fas fa-bars "></i>
+                Dae Hyun Chung's Profile
+                <hr style="margin-top: 20px; margin-right: 50px;"/>
+            </div>
+        </td>
+    </tr>
+        <td valign="top" class="account-sidebar">
+            <div>
+                <ul class="nav flex-column custom-ps-0">
+                    <a class="custom-profile-nav-link" href="#">Notifications</a>
+                    <a class="custom-profile-nav-link active" href="/Kanbas/Account/Profile/screen.html">
+                        Profile
+                    </a>
+                    <a class="custom-profile-nav-link" href="#">Files</a>
+                    <a class="custom-profile-nav-link" href="#">Settings</a>
+                    <a class="custom-profile-nav-link" href="#">ePortfolios</a>
+                    <a class="custom-profile-nav-link" href="#">Shared Content</a>
+                    <a class="custom-profile-nav-link" href="#">The Hub</a>
+                    <a class="custom-profile-nav-link" href="#">Qwickly Course Tools</a>
+                    <a class="custom-profile-nav-link" href="#">Global Announcements</a>
+                </ul>
+            </div>
         </td>
         <td valign="top">
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>                
-            </ul>
-        </td>
-        <td valign="top">
-            <h2> Dae Hyun Chung</h2>
-            Name:* <input name="fullName" type="text" value="Dae Hyun Chung"/>
-            Pronouns: 
-            <select>
-                <option>None</option>
-            </select><br/>
-            <br/>
-            Title: <input type="text" /><br/>
-
-            <h3> Contact</h3>
-            No registered services, you can add some on this <a href="#">settings</a> page.
-            <h3> Contact</h3>
-            No registered services, you can add some on this <a href="#">settings</a> page.
-            <h3> Biography</h3>
-            Faculty, Software Engineer, AI, Space, and renewables enthusiast.<br/>
-            <textarea  cols="50" rows="3"> Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
-            <h3> Links</h3>
-            <ul>
-                <li><a href="#">YouTube Links to an external site.</a></li>
-            </ul>
-
-            <div class="input-input"> 
-                Title
-                URL
-            </div>
-            <div class="wrapper">
-                <input class="inputbold" type="text" name="" placeholder="Youtube" />
-                <input class="inputbold" type="text" name="" placeholder="https://www.youtube.com" />
-                <a href="#">Remove</a>
-            </div>
-            <button>Add another link</button>
-            <div class="button-container">
+            <div style="margin-right: 50px;">
                 <form action="/Kanbas/Account/Profile/screen.html">
-                    <button>Cancel</button>
-                    <button>Save Profile</button>
-                </form>
-            </div>
-                <form action="/Kanbas/Account/Profile/screen.html"> 
-                    <button>Edit Profile</button>
-                    <button>Cancel Editing</button>
+                    <div class="div1">
+                        <div class="edit-profile-button float-end div3">
+                            <button class="btn btn-secondary btn-sm">
+                                <i class="fas fa-pencil-alt"></i>
+                                <span class="give-space">Cancel Editing</span>
+                            </button>
+                        </div>
+            
+                        <i class="fa fa-user fa-5x icon-container div3" aria-hidden="true"></i>
+                        <div class="mb-2 medium-input">
+                            <label for="name">Name:*</label>
+                            <input type="text"  class="form-control" id="name" name="name" value="Dae Hyun Chung">
+                        </div>
+            
+                        <div class="mb-2">
+                            <label for="pronouns">Pronouns:</label><br/>
+                            <select class= 'small-input' id="pronouns", name="pronouns">
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+            
+                        <div class="mb-2 medium-input">
+                            <label for="title" >Title:</label>
+                            <input class="form-control" type="text" id="title" name="title">
+                        </div>
+                    </div>
+            
+                    
+                    <div class="div1 medium-input">
+                        <h4> Contact</h4>
+                        No registered services, you can add some on this <a class="link-decoration" href="#">settings</a> page.
+                    </div>
+            
+            
+                    <div class="div1 medium-input">
+                        <h4> Biography</h4>
+                        <textarea  class="form-control" cols="50" rows="4" id="biography" name="biography"> Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                    </div>
+                    
+            
+                    <div class="div1">
+                        <h4> Links</h4>
+                        <div class="row">
+                            <div class="custom-col-md-0 text-center">
+                                <strong>Title</strong>
+                            </div>
+                            <div class="custom-col-md-1">
+                            </div>
+                            <div class="custom-col-md-0 text-center">
+                                <strong>URL</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="custom-col-md-0">
+                                <input class="form-control" type="text" name="link_title" value="YouTube">
+                            </div>
+                            <div class="custom-col-md-1 vertical-center">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                            <div class="custom-col-md-0">
+                                <input class="form-control" type="text" name="link_url" value="https://www.youtube.com/watch?v=_Hq9n7cc8rk&ab_channel=WebDevTV">
+                            </div>
+                        </div> 
+                    </div>
+                    
+                    <hr class="medium-input"/>
+                    <div class="button-container cancel-save-button">
+                        <button class="btn btn-secondary btn-sm">Cancel</button>
+                        <button class="btn btn-danger btn-sm">Save Profile</button>
+                    </div>
                 </form>
             </div>
         </td>

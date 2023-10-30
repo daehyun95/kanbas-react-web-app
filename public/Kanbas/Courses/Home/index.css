@@ -1,0 +1,66 @@
+.header-col {
+    height: 55px;
+    margin-bottom: 10px;
+}
+
+
+.breadcrumb-format {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.link-decoration {
+    text-decoration: none;
+    color: red;
+}
+
+.format-button-size {
+    text-align: center;
+    font-size: xx-small;
+    width: 100px;
+    height: 30px;
+}
+.format-button-size-2 {
+    text-align: center;
+    font-size: xx-small;
+    width: 120px;
+    height: 30px;
+}
+
+.format-ellipsis-size {
+    text-align: center;
+    font-size: xx-small;
+    width: 20px;
+    height: 30px;
+}
+
+.breadcrumb-module-format {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+hr.new1 {
+    border: 1.3px solid rgba(128, 128, 128, 0.166);
+  }
+
+
+.wd-rounded-corners-all-around {
+    border-radius: 55px;
+}
+
+.wd-border-thin {
+    border-width: 1px;
+}
+.wd-border-solid {
+    border-style: solid; 
+}
+
+.wd-padding-fat {
+    padding: 3px;
+    }
+
+.dropdown-menu-full-width {
+    min-width: 100vw;
+    left: 0 !important;
+    right: 0 !important;
+}
