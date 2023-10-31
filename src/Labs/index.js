@@ -7,6 +7,7 @@ function Labs() {
       <div>
          <Nav/>
          <Assignment3/>
+         dffd
       </div>
     );
  }
