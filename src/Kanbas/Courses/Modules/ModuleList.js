@@ -1,74 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
-import { BsPencilSquare, BsThreeDotsVertical } from "react-icons/bs";
-import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules;
-  const filteredModules = modules.filter((module) => module.course === courseId);
-  const modulesByWeek = filteredModules.reduce((acc, module) => {
-    if (module.lessons) {
-      module.lessons.forEach((lesson) => {
-        if (!acc[lesson.week]) {
-          acc[lesson.week] = [];
-        }
-        if (!acc[lesson.week].includes(module)) {
-          acc[lesson.week].push(module);
-        }
-      });
-    }
-    return acc;
-  }, {});
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
 
   return (
-    <div>
-      {Object.keys(modulesByWeek).map((week, index) => (
-        <div key={index} className="list-group mb-3">
-          <li className="list-group-item list-group-item-action list-group-item-secondary">
-            <span>Week {week} - Intro</span>
-            <div className="float-end me-3">
-              <AiOutlineCheckCircle className="me-1" />
-              <AiOutlinePlus className="me-1" />
-              <BsThreeDotsVertical />
-            </div>
-          </li>
-          {
-            modulesByWeek[week].map((module, moduleIndex) => (
-              <li key={moduleIndex} className="list-group-item">
-                <div className="d-flex justify-content-between align-items-center">
-                  <div className="mb-2">
-                    {module.name}
-                  </div>
-                  <div className="float-end me-3 mb-2">
-                    <AiOutlineCheckCircle className="me-1" />
-                    <BsThreeDotsVertical />
-                  </div>
-                </div>
-                {module.lessons
-                  .filter((lesson) => lesson.week === week)
-                  .map((lesson, lessonIndex) => (
-                    <li key={lessonIndex} className="list-group-item">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div>
-                          {lesson.name}
-                        </div>
-                        <div className="float-end">
-                          <AiOutlineCheckCircle className="me-1" />
-                          <BsThreeDotsVertical/>
-                        </div>
-                      </div>
-                    </li>
-                  ))
-                }
-              </li>
-            ))
-          }
+    <ul className="list-group">
+      <div className="list-group mb-4" style={{width:'40%'}}>
+        <input
+          value={module.name}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, name: e.target.value }))
+          }/>
+        <textarea
+          value={module.description}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, description: e.target.value }))
+          }/>
+        <div className="d-flex ">
+          <button  className="btn btn-sm btn-primary" 
+            onClick={() => dispatch(updateModule(module))}>
+                  Update
+          </button>
+          <button className="btn btn-sm btn-success" 
+            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+              Add
+          </button>
         </div>
-      ))}
-    </div>
+
+      </div>
+      {modules
+        .filter((module) => module.course === courseId)
+        .map((module, index) => (
+          <li key={index} className="list-group-item">
+            <div className="float-end">
+              <button className="btn btn-sm btn-danger"
+                onClick={() => dispatch(deleteModule(module._id))}>
+                Delete
+              </button>
+              <button className="btn btn-sm btn-success"
+                onClick={() => dispatch(setModule(module))}>
+                Edit
+              </button>
+            </div>
+            <h5>{module.name}</h5>
+            {module.description}<br/>
+            {module._id}
+          </li>))}
+    </ul>
   );
 }
-
 export default ModuleList;

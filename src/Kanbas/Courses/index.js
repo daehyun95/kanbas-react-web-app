@@ -23,11 +23,12 @@ import Syllabus from "./Syllabus";
 import Settings from "./Settings";
 
 
-
-function Courses() {
+function Courses({ courses }) {
+  const {courseId} = useParams();
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div>
-      <TopHeader />
+      <TopHeader/>
       <CourseNavigation />
       <div>
         <div
