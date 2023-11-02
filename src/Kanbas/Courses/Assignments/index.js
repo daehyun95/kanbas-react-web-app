@@ -40,7 +40,7 @@ function Assignments() {
                   <button type="button" className="btn btn-danger btn-sm" >
                     <Link
                       className="text-decoration-none" style={{color: "black"}}
-                      to={`/kanbas/courses/${courseId}/assignments/editor`}>
+                      to={`/kanbas/courses/${courseId}/Assignments/editor`}>
                       <AiOutlinePlus className="me-1" />
                       Assignment
                     </Link>
