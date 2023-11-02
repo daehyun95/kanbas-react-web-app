@@ -1,63 +1,94 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import db from "../../Database";
 import {BsPencilSquare,  BsThreeDotsVertical} from "react-icons/bs";
 import {AiOutlineCheckCircle, AiOutlinePlus} from "react-icons/ai";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "./assignmnetsReducer";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments ;
   const quizzes = db.quizzes;
   const exams = db.exams;
   const projects = db.projects;
+    
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
 
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
   const courseQuizzes = quizzes.filter(
     (quizzes) => quizzes.course === courseId);
   const courseExams = exams.filter(
-      (exams) => exams.course === courseId);
-    const courseProjects = projects.filter(
-      (projects) => projects.course === courseId);
+    (exams) => exams.course === courseId);
+  const courseProjects = projects.filter(
+    (projects) => projects.course === courseId);
 
   return (
     <div>
-      <div className="mt-3">
-            <input type="text" placeholder="Search for Assignment" className="float-start form-control form-control-sm w-25" />
-            <div class="d-grid gap-1 d-flex justify-content-end mb-3">
-                <button type="button" className="btn btn-secondary  btn-sm"><AiOutlinePlus className='me-1'/>Group</button>
-                <button type="button" className="btn btn-danger  btn-sm"><AiOutlinePlus className='me-1'/>Assignment</button>
-                <button type="button" className="btn btn-secondary  btn-sm"><BsThreeDotsVertical/></button>
-            </div> 
-            <hr style={{width:'90vw'}}/>
-      </div>
-      <div className="list-group mb-3">
-        <li className="list-group-item list-group-item-action list-group-item-secondary">
-            Assignments  
-            <div className="float-end">
-                <span className="me-2">
-                    40% of Total
-                </span>
-                <AiOutlinePlus className="me-1"/>
-                <BsThreeDotsVertical/>
-            </div>
-        </li>
-        {courseAssignments.map((assignment) => (
-          <Link
-            key={assignment._id}
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item">
-            <div>
-              <BsPencilSquare className="me-2"/>{assignment.title}
-              <div className="float-end align-items-center">
-                <AiOutlineCheckCircle className="me-1"/>
-                <BsThreeDotsVertical/>
+      <ul className="list-group">
+        <div className="mt-3">
+              <input type="text" placeholder="Search for Assignment" className="float-start form-control form-control-sm w-25" />
+              <div class="d-grid gap-1 d-flex justify-content-end mb-3">
+                  <button type="button" className="btn btn-secondary  btn-sm"><AiOutlinePlus className='me-1'/>Group</button>
+                  <button type="button" className="btn btn-danger btn-sm" >
+                    <Link
+                      className="text-decoration-none" style={{color: "black"}}
+                      to={`/kanbas/courses/${courseId}/Assignments/editor`}>
+                      <AiOutlinePlus className="me-1" />
+                      Assignment
+                    </Link>
+                  </button>
+                  <button type="button" className="btn btn-secondary  btn-sm"><BsThreeDotsVertical/></button>
+              </div> 
+              <hr style={{width:'90vw'}}/>
+        </div>
+        <div className="list-group mb-3">
+          <li className="list-group-item list-group-item-action list-group-item-secondary">
+              Assignments  
+              <div className="float-end">
+                  <span className="me-2">
+                      40% of Total
+                  </span>
+                  <AiOutlinePlus className="me-1"/>
+                  <BsThreeDotsVertical/>
+              </div>
+          </li>
+          {assignments
+          .filter((assignment) => assignment.course === courseId)
+          .map((assignment, index) => (
+            <div key={assignment._id} className="list-group-item">
+              <div>
+                <Link className="text-decoration-none" style={{color: "black"}}
+                    key={assignment._id}
+                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                    >
+                  <BsPencilSquare className="me-2" />
+                  {assignment.title}
+                </Link>
+                <div className="d-flex float-end gap-1">
+                  <button
+                    className="btn btn-sm btn-danger"
+                    onClick={() => dispatch(deleteAssignment(assignment._id))}
+                  >
+                    Delete
+                  </button>
+                  <div className="align-items-center">
+                    <AiOutlineCheckCircle className="me-1" />
+                    <BsThreeDotsVertical />
+                  </div>
+                </div>
               </div>
             </div>
-          </Link>
-        ))}
-      </div>
-      
+          ))}
+        </div>
+      </ul>
       <div className="list-group mb-3">
         <li className="list-group-item list-group-item-action list-group-item-secondary">
             Quizzes  

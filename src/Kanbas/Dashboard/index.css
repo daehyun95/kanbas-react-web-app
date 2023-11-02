@@ -74,5 +74,10 @@
     color: rgb(191, 167, 215)
 }
 
+.course-bg-default {
+    background-color: grey;
+  }
 
-
+.course-text-default {
+    color: grey;
+}
