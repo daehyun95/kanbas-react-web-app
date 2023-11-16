@@ -4,13 +4,15 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 import { PiNotebookBold } from "react-icons/pi";
 import {React, useState, useEffect} from "react";
 import axios from "axios";
+const API_BASE = process.env.REACT_APP_API_BASE;
+const COURSES_URL = `${API_BASE}/courses`;
 
 function Dashboard() {
   const [courses, setCourses] = useState([]);
   const [course, setCourse] = useState({});
 
   const addCourse = async () => {
-    const response = await axios.post("http://localhost:4000/api/courses", course);
+    const response = await axios.post(COURSES_URL, course);
     const newCourse = response.data; 
     setCourses([
       newCourse,
@@ -21,7 +23,7 @@ function Dashboard() {
 
   const deleteCourse = async (id) => {
     const response = await axios.delete(
-      `http://localhost:4000/api/courses/${id}`
+      `${COURSES_URL}/${id}`
     );
     setCourses(courses.filter(
       (c) => c._id !== id));
@@ -29,7 +31,7 @@ function Dashboard() {
 
   const updateCourse = async () => {
     const response = await axios.put(
-      `http://localhost:4000/api/courses/${course._id}`,
+      `${COURSES_URL}/${course._id}`,
       course
     );
     setCourses(courses.map((c) => (c._id ===course._id ? course: c)));
@@ -37,7 +39,7 @@ function Dashboard() {
 
 
   const findAllCourses = async () => {
-    const response = await axios.get("http://localhost:4000/api/courses");
+    const response = await axios.get(COURSES_URL);
     setCourses(response.data);
   };
 
