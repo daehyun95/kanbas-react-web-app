@@ -23,7 +23,8 @@ import Syllabus from "./Syllabus";
 import Settings from "./Settings";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+const API_BASE = process.env.REACT_APP_API_BASE;
+const COURSES_URL = `${API_BASE}/courses`;
 
 function Courses() {
   const {courseId} = useParams();
@@ -31,7 +32,7 @@ function Courses() {
   
   const findCourseById = async (courseId) => {
     const response = await axios.get(
-      `http://localhost:4000/api/courses/${courseId}`
+      `${COURSES_URL}/${courseId}`
     );
     setCourse(response.data);
   };
