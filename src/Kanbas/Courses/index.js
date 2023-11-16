@@ -21,11 +21,25 @@ import Outcomes from "./Outcomes";
 import Collaborations from "./Collaborations";
 import Syllabus from "./Syllabus";
 import Settings from "./Settings";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
-function Courses({ courses }) {
+function Courses() {
   const {courseId} = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `http://localhost:4000/api/courses/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
+
   return (
     <div>
       <TopHeader/>

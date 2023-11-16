@@ -1,80 +1,123 @@
 import { Link } from "react-router-dom";
-import db from "../Database";
 import "./index.css";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { PiNotebookBold } from "react-icons/pi";
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
+import axios from "axios";
+
+function Dashboard() {
+  const [courses, setCourses] = useState([]);
+  const [course, setCourse] = useState({});
+
+  const addCourse = async () => {
+    const response = await axios.post("http://localhost:4000/api/courses", course);
+    const newCourse = response.data; 
+    setCourses([
+      newCourse,
+      ...courses
+    ]);
+    setCourse({ name: "" });
+  };
+
+  const deleteCourse = async (id) => {
+    const response = await axios.delete(
+      `http://localhost:4000/api/courses/${id}`
+    );
+    setCourses(courses.filter(
+      (c) => c._id !== id));
+  };
+
+  const updateCourse = async () => {
+    const response = await axios.put(
+      `http://localhost:4000/api/courses/${course._id}`,
+      course
+    );
+    setCourses(courses.map((c) => (c._id ===course._id ? course: c)));
+  };
 
 
-function Dashboard(
-  { courses, course, setCourse, addNewCourse,
-    deleteCourse, updateCourse }
-  ) {
-  
+  const findAllCourses = async () => {
+    const response = await axios.get("http://localhost:4000/api/courses");
+    setCourses(response.data);
+  };
+
+  useEffect(() => {
+    findAllCourses();
+  }, []);
+
   return (
     <div className="db-container">
       <div>
         <h1 >Dashboard</h1>
         <hr style={{width: "100vw"}}/>
       </div>
+
       <div className="db-mt-0">
         <div className="db-format">
           <h4>Published Courses ({courses.length})</h4><hr/>
-        </div>
-      </div>
-      <div>
-        <input value={course.name} className="form-control"
-              onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
-        <input value={course.number} className="form-control"
-              onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
-        <input value={course.startDate} className="form-control" type="date"
-              onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
-        <input value={course.endDate} className="form-control" type="date"
-              onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
 
-        <div className="d-grid gap-1 d-flex mb-3">
-          <button onClick={addNewCourse} type="button" class="btn btn-success btn-sm mr-3">
-            Add
-          </button>
-          <button onClick={updateCourse} type="button" class="btn btn-primary btn-sm">
-            Update
-          </button>
-        </div>
-      </div>
-
-
-      <div className="d-flex flex-row flex-wrap">
-        {courses.map((course) => (
-          <Link
-            key={course._id} 
-            to={`/Kanbas/Courses/${course._id}`}
-            className="course custom-mx-0">
-            <div className={`course-head course-bg-default course-bg-${course._id}`}>
-              <BiDotsVerticalRounded className="float-end mt-2 me-2"/>
-            </div>
-            <div className="course-body">
-              <span className={`course-text-default course-text-${course._id}`}>{course.name}</span><br />
-              {course.number}<br />
-              <PiNotebookBold/>
-            </div>
-            <div className="d-grid gap-1 d-flex justify-content-end mb-3">
-              <button className=" btn btn-sm btn-warning"
-                onClick={(event) => {
-                  event.preventDefault();
-                  setCourse(course);
-                }}>
-                Edit
+          <div className="list-group my-3">
+            <div className="list-group-item d-flex">
+              <input 
+                className="col-sm mx-1"
+                placeholder="Course Name"
+                onChange={(e) => setCourse({
+                  ...course, name: e.target.value })}
+                value={course.name} type="text"
+              />
+              <button 
+                onClick={addCourse}
+                className="btn btn-warning mx-1 col-sm">
+                Add
               </button>
-              <button className="btn btn-sm btn-danger"
-                onClick={(event) => {
-                  event.preventDefault();
-                  deleteCourse(course._id);
-                }}>
-                Delete
+              <button 
+                onClick={updateCourse}
+                className="btn btn-primary mx-1 col-sm">
+                Update
               </button>
             </div>
-        </Link>
-        ))}
+          </div>
+          
+
+          <div className="row">
+            <div className="row row-cols-1 row-cols-md-5 g-4">
+              {courses.map((course, index) => (
+                <div className="col" style={{width:300}}>
+                    <div className="card">
+                        <Link
+                        key={course._id}
+                        to={`/Kanbas/Courses/${course._id}`}
+                        >
+                        <div className={`course-head course-bg-${course._id}  course-bg-default`}>
+                          <BiDotsVerticalRounded className="float-end mt-2 me-2" />
+                        </div>
+                    
+                        </Link>
+                        <div className="course-body">
+                            <span className={`course-text-${course._id} course-text-default`}>{course.name}</span><br />
+                            {course.number}<br />
+                            <PiNotebookBold /><br />
+                          </div>
+                        <div className="d-flex mt-3">
+                        <button 
+                            onClick={() => setCourse(course)}
+                            className="btn btn-warning col">
+                            Edit
+                          </button>
+                          <button 
+                            onClick={() => deleteCourse(course._id)}
+                            className="btn btn-danger col">
+                            Delete
+                          </button>
+                        </div>
+                    </div>
+                  </div>
+              ))}
+            </div>
+          </div>          
+
+            
+        </div>
       </div>
     </div>
 
