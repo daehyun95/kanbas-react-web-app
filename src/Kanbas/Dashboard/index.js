@@ -101,12 +101,12 @@ function Dashboard() {
                         <div className="d-flex mt-3">
                         <button 
                             onClick={() => setCourse(course)}
-                            className="btn btn-warning col">
+                            className="btn btn-warning ">
                             Edit
                           </button>
                           <button 
                             onClick={() => deleteCourse(course._id)}
-                            className="btn btn-danger col">
+                            className="btn btn-danger">
                             Delete
                           </button>
                         </div>
