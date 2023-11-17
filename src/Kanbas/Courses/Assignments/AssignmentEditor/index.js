@@ -41,30 +41,21 @@ function AssignmentEditor() {
       dispatch(updateAssignment(localAssignment));
     } else {
       // If the assignment doesn't have an ID, it's a new assignment, so add it.
-      const newAssignment = await createAssignment(courseId, localAssignment);
+      const newAssignment = await createAssignment(courseId, assignment);
       dispatch(addAssignment(newAssignment));
     }
 
     navigate(`/kanbas/courses/${courseId}/assignments`);
   };
 
-
-
   useEffect(() => {
     if (assignmentId !== "add") {
       const editAssign = assignments.find((ad) => ad._id === assignmentId);
       setLocalAssignment(editAssign);
-    } else {
-      setLocalAssignment({
-        title: "New Title",
-        description: "New Description",
-        dueDate: "2023-01-10",
-        availableFromDate: "2023-01-10",
-        availableUntilDate: "2023-01-10",
-        points: "100",
-      });
-    }
+    } 
   }, [assignmentId, assignments]);
+
+
 
   return (
     <> 
