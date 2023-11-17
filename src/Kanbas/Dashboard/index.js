@@ -4,8 +4,10 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 import { PiNotebookBold } from "react-icons/pi";
 import {React, useState, useEffect} from "react";
 import axios from "axios";
+
 const API_BASE = process.env.REACT_APP_API_BASE;
 const COURSES_URL = `${API_BASE}/courses`;
+// const COURSES_URL = 'https://kanbas-node-server-app-cwch.onrender.com/api/courses';
 
 function Dashboard() {
   const [courses, setCourses] = useState([]);

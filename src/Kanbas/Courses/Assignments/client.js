@@ -4,6 +4,8 @@ const API_BASE = process.env.REACT_APP_API_BASE;
 const COURSES_URL = `${API_BASE}/courses`;
 const ASSIGNMENTS_URL = `${API_BASE}/assignments`;
 
+// const ASSIGNMENTS_URL = 'https://kanbas-node-server-app-cwch.onrender.com/api/assignments';
+// const COURSES_URL = 'https://kanbas-node-server-app-cwch.onrender.com/api/courses';
 
 export const addAssignment = async (courseId, assignment) => {
     const response = await axios.post(
