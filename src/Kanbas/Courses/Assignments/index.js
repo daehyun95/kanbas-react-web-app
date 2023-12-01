@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import * as client from "./client";
 import db from "../../Database";
 import {BsPencilSquare,  BsThreeDotsVertical} from "react-icons/bs";
 import {AiOutlineCheckCircle, AiOutlinePlus} from "react-icons/ai";
@@ -9,7 +10,10 @@ import {
   deleteAssignment,
   updateAssignment,
   setAssignment,
+  setAssignments,
 } from "./assignmnetsReducer";
+import {createAssignment } from "./client";
+
 
 function Assignments() {
   const { courseId } = useParams();
@@ -21,14 +25,42 @@ function Assignments() {
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
 
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
   const courseQuizzes = quizzes.filter(
     (quizzes) => quizzes.course === courseId);
   const courseExams = exams.filter(
     (exams) => exams.course === courseId);
   const courseProjects = projects.filter(
     (projects) => projects.course === courseId);
+
+    const handleAddAssignment = () => {
+      createAssignment(courseId, assignment).then((assignment) => {
+        dispatch(addAssignment(assignment));
+      });
+    };
+    
+    const handleDeleteAssignment = (assignmentId) => {
+      client.deleteAssignment(assignmentId).then((status) => {
+        dispatch(deleteAssignment(assignmentId));
+      });
+    };
+  
+    const handleEditAssignment = (selectedAssignment) => {
+      dispatch(setAssignment(selectedAssignment)); 
+    };
+  
+    const handleUpdateAssignment = async () => {
+      const status = await client.updateAssignment(assignment);
+      dispatch(updateAssignment(assignment));
+    };
+  
+    const findAssignmentsForCourse = async() =>{
+      const newAssignments = await client.findAssignmentsForCourse(courseId);
+      dispatch(setAssignments(newAssignments));
+    }
+
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)}, [courseId]);
+
 
   return (
     <div>
@@ -40,7 +72,7 @@ function Assignments() {
                   <button type="button" className="btn btn-danger btn-sm" >
                     <Link
                       className="text-decoration-none" style={{color: "black"}}
-                      to={`/kanbas/courses/${courseId}/Assignments/editor`}>
+                      to={`/kanbas/courses/${courseId}/Assignments/add`}>
                       <AiOutlinePlus className="me-1" />
                       Assignment
                     </Link>
@@ -64,7 +96,6 @@ function Assignments() {
           .filter((assignment) => assignment.course === courseId)
           .map((assignment, index) => (
             <div key={assignment._id} className="list-group-item">
-              <div>
                 <Link className="text-decoration-none" style={{color: "black"}}
                     key={assignment._id}
                     to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
@@ -75,7 +106,7 @@ function Assignments() {
                 <div className="d-flex float-end gap-1">
                   <button
                     className="btn btn-sm btn-danger"
-                    onClick={() => dispatch(deleteAssignment(assignment._id))}
+                    onClick={() => handleDeleteAssignment(assignment._id)}
                   >
                     Delete
                   </button>
@@ -84,7 +115,6 @@ function Assignments() {
                     <BsThreeDotsVertical />
                   </div>
                 </div>
-              </div>
             </div>
           ))}
         </div>
