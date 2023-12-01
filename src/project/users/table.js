@@ -18,7 +18,7 @@ function UserTable() {
       console.log(err);
     }
   };
-
+ 
   const deleteUser = async (user) => {
     try {
       await client.deleteUser(user);
