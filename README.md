@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Website
+https://deploy-preview-2--charming-monstera-6190e5.netlify.app/#/Kanbas/Dashboard \
+https://kanbas-node-server-app-cwch.onrender.com/
 
 ## Available Scripts
 
