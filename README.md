@@ -1,8 +1,3 @@
-# Website
-https://fluffy-blini-c4e220.netlify.app/Home \
-https://flora-fauna-node-server-app.onrender.com/project/users/ 
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
